@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F42D7EF1E23F34700D210B0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D7EE1E23F34700D210B0 /* Player.swift */; };
+		3F42D7F11E23F36400D210B0 /* TileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D7F01E23F36400D210B0 /* TileState.swift */; };
+		3F42D7F31E23F38000D210B0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D7F21E23F38000D210B0 /* Result.swift */; };
+		3F42D7F51E23F39E00D210B0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D7F41E23F39E00D210B0 /* Game.swift */; };
 		3FDBDF451E2118BA00A5E110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBDF441E2118BA00A5E110 /* AppDelegate.swift */; };
 		3FDBDF471E2118BA00A5E110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBDF461E2118BA00A5E110 /* ViewController.swift */; };
 		3FDBDF4A1E2118BA00A5E110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FDBDF481E2118BA00A5E110 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F42D7EE1E23F34700D210B0 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		3F42D7F01E23F36400D210B0 /* TileState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileState.swift; sourceTree = "<group>"; };
+		3F42D7F21E23F38000D210B0 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3F42D7F41E23F39E00D210B0 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		3FDBDF411E2118BA00A5E110 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDBDF441E2118BA00A5E110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FDBDF461E2118BA00A5E110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +76,10 @@
 				3F42D7ED1E23F28100D210B0 /* Supporting Files */,
 				3FDBDF461E2118BA00A5E110 /* ViewController.swift */,
 				3FDBDF481E2118BA00A5E110 /* Main.storyboard */,
+				3F42D7EE1E23F34700D210B0 /* Player.swift */,
+				3F42D7F01E23F36400D210B0 /* TileState.swift */,
+				3F42D7F21E23F38000D210B0 /* Result.swift */,
+				3F42D7F41E23F39E00D210B0 /* Game.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -146,6 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FDBDF471E2118BA00A5E110 /* ViewController.swift in Sources */,
+				3F42D7F51E23F39E00D210B0 /* Game.swift in Sources */,
+				3F42D7F31E23F38000D210B0 /* Result.swift in Sources */,
+				3F42D7F11E23F36400D210B0 /* TileState.swift in Sources */,
+				3F42D7EF1E23F34700D210B0 /* Player.swift in Sources */,
 				3FDBDF451E2118BA00A5E110 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
