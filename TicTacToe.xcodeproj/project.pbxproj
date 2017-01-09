@@ -35,6 +35,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F42D7ED1E23F28100D210B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FDBDF441E2118BA00A5E110 /* AppDelegate.swift */,
+				3FDBDF4B1E2118BA00A5E110 /* Assets.xcassets */,
+				3FDBDF4D1E2118BA00A5E110 /* LaunchScreen.storyboard */,
+				3FDBDF501E2118BA00A5E110 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3FDBDF381E2118BA00A5E110 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +65,9 @@
 		3FDBDF431E2118BA00A5E110 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				3FDBDF441E2118BA00A5E110 /* AppDelegate.swift */,
+				3F42D7ED1E23F28100D210B0 /* Supporting Files */,
 				3FDBDF461E2118BA00A5E110 /* ViewController.swift */,
 				3FDBDF481E2118BA00A5E110 /* Main.storyboard */,
-				3FDBDF4B1E2118BA00A5E110 /* Assets.xcassets */,
-				3FDBDF4D1E2118BA00A5E110 /* LaunchScreen.storyboard */,
-				3FDBDF501E2118BA00A5E110 /* Info.plist */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 				3FDBDF551E2118BA00A5E110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
