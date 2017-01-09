@@ -20,14 +20,9 @@ class ViewController: UIViewController {
 
     private func refreshLabel() {
         if let result = game.result {
-            // @TODO deskriptivan toString u Result
-            if case let .win(player) = result {
-                state.text = "Igrač \(player) je pobijedio!"
-            } else if case .tie = result {
-                state.text = "Izjednačen je!"
-            }
+            state.text = "\(result)"
         } else {
-            state.text = "Na redu je igrač \(game.currentPlayer)"
+            state.text = "Na redu je igrač \(game.currentPlayer.rawValue.uppercased())"
         }
     }
     
@@ -40,7 +35,7 @@ class ViewController: UIViewController {
         
         game.nextMove(row: row, col: col)
         if case let .occupied(player) = game.state[row][col] {
-            sender.setTitle("\(player)", for: .normal)
+            sender.setTitle("\(player.rawValue.uppercased())", for: .normal)
         }
         refreshLabel()
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Player {
+enum Player: String {
     case x
     case o
 }

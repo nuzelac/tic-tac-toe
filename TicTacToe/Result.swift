@@ -8,7 +8,16 @@
 
 import Foundation
 
-enum Result {
+enum Result: CustomStringConvertible {
     case win(Player)
     case tie
+    
+    var description: String {
+        switch self {
+        case let .win(player):
+            return "Igrač \(player) je pobijedio!"
+        case .tie:
+            return "Izjednačen je!"
+        }
+    }
 }
