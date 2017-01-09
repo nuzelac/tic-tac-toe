@@ -19,10 +19,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBOutlet var buttons: [UIButton]!
+    
+    @IBOutlet var boardButtons: [UIButton]!
 
     @IBAction func titleButtonTap(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var state: UILabel!
+    
+    
+    @IBAction func reset(_ sender: UIButton) {
     }
 }
 
