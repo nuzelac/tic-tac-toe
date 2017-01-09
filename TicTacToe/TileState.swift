@@ -8,7 +8,20 @@
 
 import Foundation
 
-enum TileState {
+enum TileState: Equatable {
     case occupied(Player)
     case empty
+
+    public static func ==(lhs: TileState, rhs: TileState) -> Bool {
+        switch (lhs, rhs) {
+        case (let .occupied(player1), let .occupied(player2)):
+            return player1 == player2
+            
+        case (.empty, .empty):
+            return true
+            
+        default:
+            return false
+        }
+    }
 }

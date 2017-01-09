@@ -9,7 +9,9 @@
 import Foundation
 
 class Game {
-    var result: Result?
+    var result: Result? {
+        return nil // @TODO
+    }
     var state: [[TileState]]
     var currentPlayer: Player
     
@@ -24,7 +26,10 @@ class Game {
     }
     
     func nextMove(row: Int, col: Int) {
-        state[row][col] = .occupied(currentPlayer)
-        currentPlayer = currentPlayer == .x ? .o : .x
+        let cell = state[row][col]
+        if cell == .empty {
+            state[row][col] = .occupied(currentPlayer)
+            currentPlayer = currentPlayer == .x ? .o : .x
+        }
     }
 }
