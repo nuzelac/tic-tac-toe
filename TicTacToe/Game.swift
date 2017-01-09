@@ -10,7 +10,21 @@ import Foundation
 
 class Game {
     var result: Result?
-    func nextMove(row: Int, col: Int) {
+    var state: [[TileState]]
+    var currentPlayer: Player
+    
+    init() {
+        currentPlayer = arc4random() % 2 == 0 ? .x : .o
         
+        state = [
+            [.empty, .empty, .empty],
+            [.empty, .empty, .empty],
+            [.empty, .empty, .empty],
+        ]
+    }
+    
+    func nextMove(row: Int, col: Int) {
+        state[row][col] = .occupied(currentPlayer)
+        currentPlayer = currentPlayer == .x ? .o : .x
     }
 }

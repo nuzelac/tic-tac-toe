@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var game = Game()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func reset(_ sender: UIButton) {
+//        game = Game()
     }
 }
 
