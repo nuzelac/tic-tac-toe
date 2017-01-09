@@ -26,10 +26,13 @@ class Game {
     }
     
     func nextMove(row: Int, col: Int) {
-        let cell = state[row][col]
-        if cell == .empty {
-            state[row][col] = .occupied(currentPlayer)
-            currentPlayer = currentPlayer == .x ? .o : .x
+        if result == nil {
+            let cell = state[row][col]
+            
+            if cell == .empty {
+                state[row][col] = .occupied(currentPlayer)
+                currentPlayer = currentPlayer == .x ? .o : .x
+            }
         }
     }
 }
