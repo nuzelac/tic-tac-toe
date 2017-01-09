@@ -10,5 +10,7 @@ import Foundation
 
 class Game {
     var result: Result?
-    func nextMove(row: Int, col: Int)
+    func nextMove(row: Int, col: Int) {
+        
+    }
 }
