@@ -9,6 +9,6 @@
 import Foundation
 
 enum Player: String {
-    case x
-    case o
+    case x = "X"
+    case o = "O"
 }

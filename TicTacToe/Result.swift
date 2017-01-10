@@ -15,7 +15,7 @@ enum Result: CustomStringConvertible {
     var description: String {
         switch self {
         case let .win(player):
-            return "Igrač \(player) je pobijedio!"
+            return "Igrač \(player.rawValue) je pobijedio!"
         case .tie:
             return "Izjednačen je!"
         }
