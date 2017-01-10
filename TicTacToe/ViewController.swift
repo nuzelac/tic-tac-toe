@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refreshLabel()
+        refreshStateLabel()
     }
 
-    private func refreshLabel() {
+    private func refreshStateLabel() {
         if let result = game.result {
             state.text = "\(result)"
         } else {
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         if case let .occupied(player) = game.state[row][col] {
             sender.setTitle("\(player.rawValue.uppercased())", for: .normal)
         }
-        refreshLabel()
+        refreshStateLabel()
     }
     
     @IBOutlet weak var state: UILabel!
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             button.setTitle("", for: .normal)
         }
         
-        refreshLabel()
+        refreshStateLabel()
     }
 }
 
