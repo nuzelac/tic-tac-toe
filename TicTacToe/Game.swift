@@ -12,49 +12,7 @@ class Game {
     var result: Result? {
         let players = [Player.x, Player.o]
 
-        // check rows
-        for i in 0..<3 {
-            for player in players {
-                if case .occupied(player) = state[i][0],
-                    case .occupied(player) = state[i][1],
-                    case .occupied(player) = state[i][2]{
-                    
-                    return Result.win(player)
-                }
-            }
-        }
-        
-        // check cols
-        for j in 0..<3 {
-            for player in players {
-                if case .occupied(player) = state[0][j],
-                    case .occupied(player) = state[1][j],
-                    case .occupied(player) = state[2][j]{
-                    
-                    return Result.win(player)
-                }
-            }
-        }
-        
-        // check diagonals
-        for player in players {
-            if case .occupied(player) = state[0][0],
-                case .occupied(player) = state[1][1],
-                case .occupied(player) = state[2][2]{
-                
-                return Result.win(player)
-            }
-        }
-        for player in players {
-            if case .occupied(player) = state[0][2],
-                case .occupied(player) = state[1][1],
-                case .occupied(player) = state[2][0]{
-                
-                return Result.win(player)
-            }
-        }
-
-        return nil
+        return checkRows(players: players) ?? checkCols(players: players) ?? checkDiagonals(players: players) ?? nil
     }
     var state: [[TileState]]
     var currentPlayer: Player
@@ -78,5 +36,57 @@ class Game {
                 currentPlayer = currentPlayer == .x ? .o : .x
             }
         }
+    }
+    
+    
+    private func checkRows(players: [Player]) -> Result? {
+        for i in 0..<3 {
+            for player in players {
+                if case .occupied(player) = state[i][0],
+                    case .occupied(player) = state[i][1],
+                    case .occupied(player) = state[i][2]{
+                    
+                    return Result.win(player)
+                }
+            }
+        }
+        
+        return nil
+    }
+    
+    private func checkCols(players: [Player]) -> Result? {
+        for j in 0..<3 {
+            for player in players {
+                if case .occupied(player) = state[0][j],
+                    case .occupied(player) = state[1][j],
+                    case .occupied(player) = state[2][j]{
+                    
+                    return Result.win(player)
+                }
+            }
+        }
+        
+        return nil
+    }
+    
+    private func checkDiagonals(players: [Player]) -> Result? {
+        for player in players {
+            if case .occupied(player) = state[0][0],
+                case .occupied(player) = state[1][1],
+                case .occupied(player) = state[2][2]{
+                
+                return Result.win(player)
+            }
+        }
+        for player in players {
+            if case .occupied(player) = state[0][2],
+                case .occupied(player) = state[1][1],
+                case .occupied(player) = state[2][0]{
+                
+                return Result.win(player)
+            }
+        }
+        
+        return nil
     }
 }

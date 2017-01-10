@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         if let result = game.result {
             state.text = "\(result)"
         } else {
-            state.text = "Na redu je igrač \(game.currentPlayer.rawValue.uppercased())"
+            state.text = "Na redu je igrač \(game.currentPlayer.rawValue)"
         }
     }
     
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         game.nextMove(row: row, col: col)
         if case let .occupied(player) = game.state[row][col] {
-            sender.setTitle("\(player.rawValue.uppercased())", for: .normal)
+            sender.setTitle("\(player.rawValue)", for: .normal)
         }
         refreshStateLabel()
     }
